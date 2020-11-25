@@ -49,11 +49,15 @@ body{
 
 ////
 
+*{
+    box-sizing: border-box;
+}
+
 h1{
     font-family: 'Poppins', sans-serif;
     font-weight: 900;
     font-size: 30px;
-    color: #5d989a;
+    color: #292927;
     transition: all 0.5s ease;
 }
 
@@ -65,9 +69,10 @@ h2{
     font-family: 'Poppins', sans-serif;
     font-weight: 900;
     font-size: 20px;
-    color: #5d989a;
+    color: #292927;
     transition: all 0.3s ease;
     line-height : 25px; 
+    text-align: left;
 }
 
 h2:hover{
@@ -111,10 +116,14 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 .column2:hover{
     width: 40%;
+    h1{
+        font-size: 40px;
+    }
 }
 
 .column3{
@@ -147,6 +156,49 @@ header{
     background-size:70%;
 }
 
+.block3{
+    box-sizing: border-box;
+    height: 70%;
+    width: 100%;
+    background-color: #b3d0bf;
+    transition: all 0.5s ease;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+
+    
+
+    
+}
+
+.block3:hover{
+    height: 80%;
+
+    p{
+        font-weight: 900;
+    }
+}
+
+.block4{
+    padding: 1em;
+    box-sizing: border-box;
+    height: 30%;
+    width: 100%;
+    background-color: #ec7d69;
+    transition: all 0.5s ease;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+}
+
+.block4:hover{
+    height: 40%;
+    width: 100%;
+    p{
+        font-weight: 900;
+    }
+}
+
 .block1:hover{
     height: 60%;
 }
@@ -162,8 +214,10 @@ header{
     object-fit: cover;
     object-position: center center;
     background-repeat: no-repeat;
-    //background-image:;
-    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url('../../escena-krampack-teatre-aquitania-1575305434419.jpg');
+    background-position: cover;
+    background-size:130%;
     transition: all 0.5s ease;
 
 }
@@ -176,4 +230,20 @@ header{
 .logo2{
     height: 80%;
     width: auto;
+}  
+
+p{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+    font-size: 20px;
+    color: #292927;
+    transition: all 0.3s ease;
+    line-height : 25px; 
+    text-align: left;
+
+}
+
+
+span{
+    padding: 1em;
 }
