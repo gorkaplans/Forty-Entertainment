@@ -175,7 +175,8 @@ header{
     height: 80%;
 
     p{
-        font-weight: 900;
+        font-size: 20pt;
+        line-height : 30px;
     }
 }
 
@@ -189,13 +190,17 @@ header{
     justify-content: center;
     align-items: center;
     padding: 1em;
+
+    .svg-container{
+        size: 10px;
+    }
 }
 
 .block4:hover{
     height: 40%;
     width: 100%;
     p{
-        font-weight: 900;
+        font-size: 20pt;
     }
 }
 
@@ -203,9 +208,9 @@ header{
     height: 60%;
 }
 
-.block2:hover{
-    height: 60%;
-}
+
+
+
 
 .block2{
     height: 50%;
@@ -215,10 +220,31 @@ header{
     object-position: center center;
     background-repeat: no-repeat;
     background-repeat: no-repeat;
-    background-image: url('../../escena-krampack-teatre-aquitania-1575305434419.jpg');
-    background-position: cover;
-    background-size:130%;
+    background-image: url('../../krampack.jpg');
+    background-position: center;
+    background-size:150%;
     transition: all 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 80px;;
+
+    .teatre{
+        visibility: hidden;
+        transition: all 0.5s ease;
+    }
+
+}
+
+.block2:hover{
+    height: 60%;
+    opacity: 0.9;
+
+    .teatre{
+        visibility: visible;
+        color: #e8d2ad;
+    }
 
 }
 
@@ -234,7 +260,7 @@ header{
 
 p{
     font-family: 'Poppins', sans-serif;
-    font-weight: 100;
+    font-weight: 900;
     font-size: 20px;
     color: #292927;
     transition: all 0.3s ease;
