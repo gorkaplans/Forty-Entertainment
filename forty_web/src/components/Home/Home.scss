@@ -47,7 +47,7 @@ body{
     width: 100vw;
 }
 
-////
+////////
 
 *{
     box-sizing: border-box;
@@ -94,7 +94,6 @@ header{
 .columns{
     height: 93%;
     display: flex;
-
 }
 .column1{
     height: 100vh; ;
@@ -127,12 +126,11 @@ header{
 }
 
 .column3{
-    box-sizing: border-box;
-    height: 100vh; 
-    background-color: #e8d2ad;
+    box-sizing: border-box; 
     width: 33.3%;
     transition: all 0.5s ease;
-    padding: 1em;
+    display: flex;
+    flex-direction: column;
 
 }
 
@@ -154,17 +152,23 @@ header{
     background-image: url('../../FORTY_LOGOV2_COLOR5.png');
     background-position: center;
     background-size:70%;
+
+    .block1:hover{
+        background-size:90%;
+    }
 }
 
 .block3{
     box-sizing: border-box;
     height: 70%;
+    min-height: fit-content;
     width: 100%;
     background-color: #b3d0bf;
     transition: all 0.5s ease;
     justify-content: center;
     align-items: center;
     padding: 1em;
+    padding-right: 12%;
 
     
 
@@ -175,8 +179,7 @@ header{
     height: 80%;
 
     p{
-        font-size: 20pt;
-        line-height : 30px;
+        font-size: 17pt;
     }
 }
 
@@ -192,7 +195,16 @@ header{
     padding: 1em;
 
     .svg-container{
-        size: 10px;
+        display: flex;
+        justify-content: flex-start;
+
+        svg{
+            fill: #201f1e;
+            height: 20px ;
+            transition: all 0.5s ease;
+
+        }
+
     }
 }
 
@@ -200,7 +212,11 @@ header{
     height: 40%;
     width: 100%;
     p{
-        font-size: 20pt;
+        font-size: 16pt;
+    }
+
+    svg{
+        height: 25px ;
     }
 }
 
@@ -219,16 +235,16 @@ header{
     object-fit: cover;
     object-position: center center;
     background-repeat: no-repeat;
-    background-repeat: no-repeat;
     background-image: url('../../krampack.jpg');
     background-position: center;
-    background-size:150%;
+    background-size:cover;
     transition: all 0.5s ease;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     padding-top: 80px;;
+    object-fit: cover;
 
     .teatre{
         visibility: hidden;
@@ -240,6 +256,7 @@ header{
 .block2:hover{
     height: 60%;
     opacity: 0.9;
+    background-size:cover;
 
     .teatre{
         visibility: visible;
@@ -261,7 +278,7 @@ header{
 p{
     font-family: 'Poppins', sans-serif;
     font-weight: 900;
-    font-size: 20px;
+    font-size: 18px;
     color: #292927;
     transition: all 0.3s ease;
     line-height : 25px; 
@@ -272,4 +289,75 @@ p{
 
 span{
     padding: 1em;
+}
+
+
+
+@media (max-width: 900px){
+
+    .columns{
+        flex-direction: column;
+    }
+
+    .column1{
+        width: 100%;
+        height: 60vh;
+       
+        
+    }
+
+    .column1:hover{
+        height: 70vh;
+        width: 100%;
+    }
+
+    .column2{
+        width: 100%;
+        height: 20vh;
+       
+        
+    }
+
+    .column2:hover{
+        height: 30vh;
+        width: 100%;
+    }
+
+    .column3{
+        width: 100%;
+        height: fit-content;
+       
+        
+    }
+
+    .column3:hover{
+        height: fit-content;
+        width: 100%;
+
+       
+    }
+
+    .block1{
+        box-sizing: border-box;
+        display: flex;
+        height: 50%;
+        width: 100%;
+        background-color: #5d989a;
+        transition: all 0.5s ease;
+        justify-content: center;
+        align-items: center;
+        padding: 1em;
+        background-repeat: no-repeat;
+        background-image: url('../../FORTY_LOGOV2_COLOR5.png');
+        background-position: center;
+        background-size:60%;
+    
+        .block1:hover{
+            background-size:90%;
+        }
+    }
+
+    .block2{
+        padding-top: 30px;
+    }
 }
