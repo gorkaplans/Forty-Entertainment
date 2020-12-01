@@ -115,6 +115,9 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    
+
 
 }
 
@@ -198,6 +201,16 @@ header{
         display: flex;
         justify-content: flex-start;
 
+        .logo-moose{
+            background-image: url('../../logo_moose.png');
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            height: 50px ;
+            width:90px;
+            transition: all 0.5s ease;
+        }
+
         svg{
             fill: #201f1e;
             height: 20px ;
@@ -217,6 +230,14 @@ header{
 
     svg{
         height: 25px ;
+    }
+    .logo-moose{
+        background-image: url('../../logo_moose.png');
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 70px ;
+        width:110px;
     }
 }
 
@@ -314,6 +335,7 @@ span{
     .column2{
         width: 100%;
         height: 20vh;
+        flex-direction: column;
        
         
     }
