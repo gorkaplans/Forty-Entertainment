@@ -1,8 +1,8 @@
 import React from 'react'; 
 
-import'./Home.scss'
+import'./Landing.scss'
 
-const Home = () => {
+const Landing = () => {
     return (
         
         <div className="columns">
@@ -35,7 +35,7 @@ const Home = () => {
 
             <span className="block4">
                 <p>-</p>
-                <p>hello@whitemoose.tv</p>
+                <p>hello@forty.tv</p>
                 <p>-</p>
                 <p>653 05 71 04 / 93 148 36 43</p>
                 <p>-</p>
@@ -54,4 +54,4 @@ const Home = () => {
     )
 }   
 
-export default Home;
+export default Landing;

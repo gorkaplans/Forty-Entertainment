@@ -4,12 +4,12 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
-import Home from '../src/components/Home'
+import Landing from '../src/components/Landing';
 
 function App() {
   return (
     <div className="App">
-      <Home />
+      <Landing/>
     </div>
   );
 }
