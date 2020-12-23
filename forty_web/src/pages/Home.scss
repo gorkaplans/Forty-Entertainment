@@ -1,0 +1,116 @@
+@import '../styles.scss';
+
+.row1{
+    display: flex;
+    width: 100%;
+    min-height: 50vh;
+    transition: $transition1;
+
+    &:hover{
+        min-height: 55vh;
+    }
+    
+    .logo-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100%;
+        width: 25%;
+        background-color: $primary1;
+        color: $secondary1;
+        transition: $transition1;
+      
+
+        .logo{
+            width: 100%;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-image: url('../images/FORTY_LOGOV2_COLOR5.png');
+            background-position: center;
+            background-size:70%;
+
+        }
+
+        &:hover{
+            width: 30%
+            
+        }
+    }
+    .about-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100%;
+        width: 50%;
+        background-color: $primary2;
+        color: $secondary2;
+        transition: $transition1;
+
+        &:hover{
+            width: 55%;
+        }
+    }
+    .contact-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100%;
+        width: 25%;
+        background-color: $primary3;
+        color: $secondary3;
+        transition: $transition1;
+
+
+        &:hover{
+            width: 30% ;
+        }
+    }
+}
+
+.row2{
+    display: flex;
+    width: 100%;
+    min-height: 50vh;
+    transition: $transition1;
+
+
+    &:hover{
+        min-height: 55vh;
+    }
+
+    .picture-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100%;
+        width: 25%;
+        background-color: grey;
+        color: $secondary1;
+        transition: $transition1;
+
+
+        &:hover{
+            width: 30%;
+        }
+    }
+
+    .projects-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100%;
+        width: 75%;
+        background-color: $primary4;
+        color: $secondary4;
+        transition: $transition1;
+
+
+        &:hover{
+            width: 80%;
+        }
+    }
+
+
+}
+    
+   

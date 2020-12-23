@@ -4,13 +4,31 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
-import Landing from '../src/components/Landing';
+import Home from './pages/Home';
+import Manifest from './pages/Manifest';
+import Contact from './pages/Contact';
+import Projects from './pages/Projects';
 
 function App() {
   return (
     <div className="App">
-      <Landing/>
-    </div>
+    <Router>
+      <Switch>
+        <Route path="/" exact>
+            <Home />
+        </Route>
+        <Route path="/Manifest" exact>
+            <Manifest />
+        </Route>
+        <Route path="/Contact" exact>
+            <Contact />
+        </Route>
+        <Route path="/Projects" exact>
+            <Projects />
+        </Route>
+      </Switch>  
+    </Router>
+  </div>
   );
 }
 
