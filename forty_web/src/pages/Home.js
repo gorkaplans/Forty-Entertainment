@@ -24,7 +24,9 @@ return (
             <Link class="projects-container bold" to="/Projects">
               PROJECTS
             </Link>
-          <div class="picture-container bold">PICTURE</div>
+            <div class="picture-container bold">
+              PICTURE
+            </div>
         </div>    
         
     </MainLayout>

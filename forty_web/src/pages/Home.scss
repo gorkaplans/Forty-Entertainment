@@ -9,6 +9,7 @@
     &:hover{
         min-height: 55vh;
     }
+
     
     .logo-container{
         display: flex;
@@ -35,6 +36,7 @@
             width: 30%
             
         }
+        
     }
     .about-container{
         display: flex;
@@ -112,5 +114,75 @@
 
 
 }
-    
-   
+
+@media (max-width: 900px){
+    .row1{
+        flex-direction: column;
+        min-height: 90vh;
+        
+        &:hover{
+        min-height: 90vh; 
+        }
+
+        .logo-container{
+            min-width:100%;
+            height: 30vh;
+        
+                .logo{
+                background-position: center;
+                background-size:contain;
+                    }
+
+                    &:hover{
+                        height: 35vh;
+                    }
+            }
+
+            .about-container{
+                min-width: 100%;
+                height: 30vh;
+                
+                &:hover{
+                    height: 35vh;
+                }
+
+            }
+
+            .contact-container{
+                min-width: 100%;
+                height: 30vh;
+
+                &:hover{
+                    height: 35vh;
+                }
+
+            }
+
+    }
+
+    .row2{
+        flex-direction: column;
+
+        .projects-container{
+            min-width: 100%;
+            height: 30vh;
+
+            &:hover{
+                height: 35vh;
+            }
+
+        }
+        .picture-container{
+            min-width: 100%;
+            height: 30vh;
+
+            &:hover{
+                height: 35vh;
+            }
+
+        }
+        
+    }
+}
+
+
