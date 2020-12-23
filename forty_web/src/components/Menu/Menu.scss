@@ -1,0 +1,82 @@
+@import '../../styles.scss';
+
+.nav-bar{
+    min-height: 100%;
+    width: 14%; 
+    transition: $transition1;
+ 
+ 
+    .logo-menu{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: auto;
+     height: 20vh;
+     background-color: $primary1;
+     color: $secondary1;
+     transition: $transition1;
+ 
+     &:hover{
+         height: 22vh;
+ 
+     }
+   
+ 
+     .logo{
+         width: 100%;
+         height: 100%;
+         background-repeat: no-repeat;
+         background-image: url('../../images/FORTY_LOGOV2_COLOR5.png');
+         background-position: center;
+         background-size:70%;
+ 
+     }}
+ 
+     .manifest-menu{
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         width: auto;
+         height: 25vh;
+         background-color: $primary3;
+         color: $secondary3;
+         transition: $transition1;
+         text-decoration:line-through;
+         
+ 
+         &:hover{
+             height: 30vh;
+         }
+         
+     }
+ 
+     .projects-menu{
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         width: auto;
+         height: 35vh;
+         background-color: $primary2;
+         color: $secondary2;
+         transition: $transition1;
+ 
+         &:hover{
+             height: 40vh;
+         }
+     }
+ 
+     .contact-menu{
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         width: auto;
+         height: 20vh;
+         background-color: $primary4;
+         color: $secondary4;
+         transition: $transition1;
+ 
+         &:hover{
+             height: 25vh;
+         }
+     }
+ }

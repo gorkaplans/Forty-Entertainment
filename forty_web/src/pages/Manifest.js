@@ -1,10 +1,12 @@
-
+import './Manifest.scss'
+import Menu from '../components/Menu';
 
 const Manifest = () => {
 
+  const menu = ['MANIFEST', 'PROJECTS', 'CONTACT']
+
 return (
-  
-    <h1>Manifest</h1>
+  <Menu titles={menu}></Menu>
   );
 }
  

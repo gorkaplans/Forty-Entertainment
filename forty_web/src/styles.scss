@@ -77,3 +77,24 @@ $transition1: all 0.3s ease-in-out;
 		font-size: 25pt;	
 	}
 }
+
+.bold2{
+    font-family: 'Poppins', sans-serif;
+	font-weight: bolder;
+	font-size: 16pt;
+	text-decoration: none;
+
+	&:hover{
+		font-size: 20pt;	
+	}
+}
+
+.bold3{
+    font-family: 'Poppins', sans-serif;
+	font-weight: bolder;
+	font-size: 16pt;
+
+	&:hover{
+		font-size: 20pt;	
+	}
+}
