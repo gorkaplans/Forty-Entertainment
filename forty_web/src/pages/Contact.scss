@@ -1,0 +1,79 @@
+@import '../styles.scss';
+
+.contact-container{
+    display: flex;
+
+    .claim-contact{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100%;
+        min-width: 36%;
+        transition: $transition1;
+        background-color: $primary4;
+        color:$secondary4;
+
+        &:hover{
+            opacity: 100%;
+            min-width: 40%;
+        }
+    }
+
+    .contact-column{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        transition: $transition1;
+
+        min-height: 100%;
+        width: 50%;
+
+        .contact-info{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        text-align: left;
+        padding: 8%;
+        height: 70%;
+        width: 100%;
+        background-color: $primary2;
+        color: $secondary2;
+
+         .svg-container{
+             width: 15%;
+             height: 15%;
+             transition: $transition1;
+
+             svg{
+                 fill: $secondary2;
+             }
+         }
+
+         &:hover{
+
+            .svg-container{
+                width: 20%;
+                height: 20%;
+            }
+
+         }
+        }
+
+        .contact-footer{
+        padding: 8%;
+        height: 30%;
+        width: 100%;
+        background-color: $primary3;
+        color: $secondary3;
+
+        }
+
+    }
+
+
+
+
+}

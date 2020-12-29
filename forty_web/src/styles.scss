@@ -83,6 +83,7 @@ $transition1: all 0.3s ease-in-out;
 	font-weight: bolder;
 	font-size: 16pt;
 	text-decoration: none;
+	transition: $transition1;
 
 	&:hover{
 		font-size: 20pt;	
@@ -97,5 +98,18 @@ $transition1: all 0.3s ease-in-out;
 
 	&:hover{
 		font-size: 20pt;	
+	}
+}
+
+
+.bold4{
+    font-family: 'Poppins', sans-serif;
+	font-weight: bolder;
+	font-size: 32pt;
+	transition: $transition1;
+	text-align: left;
+
+	&:hover{
+		font-size: 36pt;	
 	}
 }

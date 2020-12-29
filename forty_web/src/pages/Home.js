@@ -25,7 +25,6 @@ return (
               PROJECTS
             </Link>
             <div class="picture-container bold">
-              PICTURE
             </div>
         </div>    
         
