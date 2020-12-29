@@ -41,8 +41,23 @@
 
     }
 
-
-
-    
-
 }
+
+@media (max-width: 900px){
+    .manifest-container{
+        flex-direction: column;
+
+        .picture-manifest{
+            min-width: 100%;
+            min-height: 50vh;
+        }
+
+        .text-manifest{
+
+            min-width: 100%;
+            min-height: 50vh;
+
+        }
+    }
+}
+
