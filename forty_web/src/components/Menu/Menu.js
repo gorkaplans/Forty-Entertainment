@@ -17,7 +17,7 @@ const Menu = ({titles}) => {
             <div class="logo-menu">
               <Link className="logo" to='/'></Link>
             </div>
-            <Link class="manifest-menu bold3" to="/Manifest">
+            <Link class="manifest-menu bold2" to="/Manifest">
               {title1}
             </Link>
             <Link class="projects-menu bold2" to="/Projects">

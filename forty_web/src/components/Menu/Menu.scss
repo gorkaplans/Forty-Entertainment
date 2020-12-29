@@ -2,7 +2,7 @@
 
 .nav-bar{
     min-height: 100%;
-    width: 14%; 
+    min-width: 14%; 
     transition: $transition1;
     position: relative;
  
@@ -41,9 +41,7 @@
          height: 25vh;
          background-color: $primary3;
          color: $secondary3;
-         transition: $transition1;
-         text-decoration:line-through;
-         
+         transition: $transition1;         
  
          &:hover{
              height: 30vh;
