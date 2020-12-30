@@ -14,19 +14,20 @@ const Menu = ({titles}) => {
     return (
         <>
         <div className="nav-bar">
-            <div class="logo-menu">
+          <div className='test'>
+            <div className="logo-menu">
               <Link className="logo" to='/'></Link>
             </div>
-            <Link class="manifest-menu bold2" to="/Manifest">
+            <Link className="manifest-menu bold2" to="/Manifest">
               {title1}
             </Link>
-            <Link class="projects-menu bold2" to="/Projects">
+            <Link className="projects-menu bold2" to="/Projects">
               {title2}
             </Link>
-            <Link class="contact-menu bold2" to="/Contact">
+            <Link className="contact-menu bold2" to="/Contact">
               {title3}
             </Link>
-
+          </div>  
         </div>
         
         </>

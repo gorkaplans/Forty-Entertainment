@@ -5,8 +5,14 @@
     min-width: 14%; 
     transition: $transition1;
     position: relative;
- 
- 
+
+   .test{
+        position: fixed;
+        width: 14%;
+        top: 0;
+    }
+
+
     .logo-menu{
      display: flex;
      justify-content: center;
@@ -88,6 +94,12 @@
         max-height: 14%;
         min-width: 100%;
 
+        .test{
+            display: flex;
+            max-height: 14%;
+            min-width: 100%;
+        
+
         .logo-menu{
             width: 25vw;
             height: 14vh;
@@ -131,5 +143,6 @@
         }
 
     }
+}
  }
 

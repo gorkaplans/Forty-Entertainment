@@ -112,4 +112,39 @@ $transition1: all 0.3s ease-in-out;
 	&:hover{
 		font-size: 36pt;	
 	}
+}  
+
+.bold5{
+    font-family: 'Poppins', sans-serif;
+	font-weight: bolder;
+	font-size: 16pt;
+	text-align: left;
+} 
+
+.regular1{
+    font-family: 'Poppins', sans-serif;
+	font-weight: normal;
+	font-size: 14pt;
+	transition: $transition1;
+	text-align: left;
+
+	&:hover{
+		font-size: 18pt;	
+	}
+}
+
+.regular2{
+    font-family: 'Poppins', sans-serif;
+	font-weight: normal;
+	font-size: 12pt;
+	transition: $transition1;
+	text-align: left;
+}
+
+.regular3{
+    font-family: 'Poppins', sans-serif;
+	font-weight: bold;
+	font-size: 12pt;
+	transition: $transition1;
+	text-align: left;
 }

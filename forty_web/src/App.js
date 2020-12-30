@@ -8,6 +8,7 @@ import Home from './pages/Home';
 import Manifest from './pages/Manifest';
 import Contact from './pages/Contact';
 import Projects from './pages/Projects';
+import Privacy from './pages/Privacy';
 
 function App() {
   return (
@@ -25,6 +26,9 @@ function App() {
         </Route>
         <Route path="/Projects" exact>
             <Projects />
+        </Route>
+        <Route path="/Privacy" exact>
+            <Privacy />
         </Route>
       </Switch>  
     </Router>

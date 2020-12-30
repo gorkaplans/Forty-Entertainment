@@ -2,6 +2,7 @@
 
 .contact-container{
     display: flex;
+    height: 100vh;
 
     .claim-contact{
         display: flex;
@@ -63,6 +64,9 @@
         }
 
         .contact-footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
         padding: 8%;
         height: 30%;
         width: 100%;
