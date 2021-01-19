@@ -12,7 +12,7 @@ const Contact = () => {
 
     return (
       <MainLayout>
-      <div className='contact-container'>
+      <div className='contact-container2'>
       <Menu titles={menu}></Menu>
       <div className='claim-contact bold4'>
         <h1>We are the aliens! 
