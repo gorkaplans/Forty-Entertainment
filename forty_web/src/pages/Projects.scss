@@ -1,0 +1,14 @@
+@import '../styles.scss';
+
+.projects-container2{
+    display: flex;
+
+    .projects-scroll{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-width: 86%;
+        height: auto;
+        background-color: grey;
+    }
+}

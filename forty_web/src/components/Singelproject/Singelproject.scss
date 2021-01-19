@@ -1,0 +1,28 @@
+@import '../../styles.scss';
+
+
+.project-row{
+    height: 33vh;
+    display: flex;
+
+    .project-img{
+        height: 100%;
+        background-color: $primary2;
+        width: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $secondary2;
+    }
+
+    .project-titile{
+        background-color: $primary3;
+        color: $secondary3;
+        width: 60%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
