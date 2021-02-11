@@ -8,21 +8,20 @@
     .project-img{
         height: 100%;
         background-color: $primary2;
-        width: 40%;
+        width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
         color: $secondary2;
     }
 
-    .project-titile{
-        background-color: $primary3;
-        color: $secondary3;
-        width: 60%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+}
+
+
+@media (max-width: 900px){
+  
+    .project-img{
+        width: 100%;
     }
 }
 

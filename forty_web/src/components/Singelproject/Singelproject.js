@@ -5,14 +5,13 @@ import './Singelproject.scss'
 
 
 
-const Singelproject = ({title, image}) => {
+const Singelproject = ({title,}) => {
 
    
     
     return (
        <div className='project-row'>
           <div className='project-img bold4'>{title}</div>
-          <div className='project-titile bold4'>{image}</div>
        </div>
         
     )

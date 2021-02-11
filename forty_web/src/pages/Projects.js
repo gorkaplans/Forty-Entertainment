@@ -16,8 +16,12 @@ const Projects = () => {
       <div className='projects-container2'>
         <Menu titles={menu}></Menu>
         <div className='projects-scroll'>
-          <Singelproject title = 'TITLE_1' image = 'IMAGE_1' ></Singelproject>
-          <Singelproject title = 'TITLE_2' image = 'IMAGE_2' ></Singelproject>
+          <Singelproject title = 'TITLE_1'></Singelproject>
+          <Singelproject title = 'TITLE_2'></Singelproject>
+          <Singelproject title = 'TITLE_2'></Singelproject>
+          <Singelproject title = 'TITLE_2'></Singelproject>
+          <Singelproject title = 'TITLE_2'></Singelproject>
+          <Singelproject title = 'TITLE_2'></Singelproject>
         </div>
       </div>
    </MainLayout>
