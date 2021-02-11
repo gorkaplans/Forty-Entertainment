@@ -9,11 +9,11 @@ const Manifest = () => {
 return (
   <>
     <MainLayout>
-      <div className='manifest-container'>
+      <div className='manifest--container'>
       <Menu titles={menu}></Menu>
-      <div className='picture-manifest'>
+      <div className='picture--manifest'>
       </div>
-      <div className='text-manifest bold3'>
+      <div className='text--manifest bold3'>
         <h1>In 1990, 30 minutes before turning off its’ cameras, after a 13 year trip and more than forty AU (6 billion km) from Planet Earth, the satellite Voyager I, took a photo with a very humble outcome: the image shows a really tiny part of our Solar System, and our beautiful Planet with all our lives and hopes in it is only a fraction of a pixel. This picture gave us a very important tool: perspective.
         <br></br>
         <br></br>

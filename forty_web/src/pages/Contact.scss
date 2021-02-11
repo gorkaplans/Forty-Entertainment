@@ -13,6 +13,7 @@
         transition: $transition1;
         background-color: $primary4;
         color:$secondary4;
+        padding-left: 20px;
 
         &:hover{
             opacity: 100%;
@@ -65,7 +66,7 @@
 
         .contact-footer{
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
         padding: 8%;
         height: 30%;
@@ -80,4 +81,20 @@
 
 
 
+}
+
+@media (max-width: 900px){
+    .contact-container2{
+        flex-direction: column;
+        height: 100%;
+
+        .claim-contact{
+            height: 300px;
+            margin-top: 14vh;
+        }
+
+        .contact-column{
+            width: 100%;
+        }
+    }
 }

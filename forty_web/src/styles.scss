@@ -86,7 +86,7 @@ $transition1: all 0.3s ease-in-out;
 	transition: $transition1;
 
 	&:hover{
-		font-size: 20pt;	
+		font-size: 18pt;	
 	}
 }
 
@@ -97,7 +97,15 @@ $transition1: all 0.3s ease-in-out;
 	transition: $transition1;
 
 	&:hover{
-		font-size: 20pt;	
+		font-size: 18pt;	
+	}
+}
+
+@media (max-width: 900px){
+	.bold3{
+		&:hover{
+			font-size: 16.5pt;
+		}
 	}
 }
 
@@ -133,6 +141,17 @@ $transition1: all 0.3s ease-in-out;
 	}
 }
 
+@media (max-width: 900px){
+	.regular1{
+		
+		font-size: 12pt;
+		
+		&:hover{
+			font-size: 14pt;
+		}
+	}
+}
+
 .regular2{
     font-family: 'Poppins', sans-serif;
 	font-weight: normal;
@@ -148,3 +167,4 @@ $transition1: all 0.3s ease-in-out;
 	transition: $transition1;
 	text-align: left;
 }
+

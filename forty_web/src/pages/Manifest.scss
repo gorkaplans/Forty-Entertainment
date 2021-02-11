@@ -2,12 +2,12 @@
 
 
 
-.manifest-container{
+.manifest--container{
     
     display: flex;
     height: 100vh;
     
-    .picture-manifest{
+    .picture--manifest{
         min-height: 100%;
         min-width: 36%;
         background-color: grey;
@@ -23,7 +23,7 @@
         }
     }
 
-    .text-manifest{
+    .text--manifest{
         display: flex;
         justify-content: center;
         align-items: center;
@@ -45,22 +45,26 @@
 }
 
 @media (max-width: 900px){
-    .manifest-container{
+    .manifest--container{
         flex-direction: column;
+        height: 100%;
 
-        .picture-manifest{
-            min-width: 100%;
-            min-height: 50vh;
+        .picture--manifest{
+            height: 300px;
+            width: auto;
+            margin-top: 14vh;
         }
 
-        .text-manifest{
+        .text--manifest{
+            padding-top: 80px;
 
             min-width: 100%;
-            min-height: 50vh;
 
             &:hover{
                 min-width: 100%;
             }
+
+            
     
 
         }
