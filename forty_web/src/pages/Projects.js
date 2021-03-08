@@ -20,7 +20,6 @@ class Projects extends React.Component{
   componentDidMount() {
       client.getEntries()
       .then((response) => {
-          console.log(response)
           this.setState({
               projects: response.items
           })

@@ -9,6 +9,7 @@ import Manifest from './pages/Manifest';
 import Contact from './pages/Contact';
 import Projects from './pages/Projects';
 import Privacy from './pages/Privacy';
+import ProjectDetail from './components/ProjectDetail/ProjectDetail';
 
 function App() {
   return (
@@ -30,6 +31,9 @@ function App() {
         <Route path="/Privacy" exact>
             <Privacy />
         </Route>
+        <Route path="/Projects/:id">
+            <ProjectDetail />
+         </Route>
       </Switch>  
     </Router>
   </div>
