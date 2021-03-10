@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import MainLayout from '../MainLayout'
 import Menu from '../Menu'
+import marked from 'marked'
 
 
 
@@ -15,12 +16,17 @@ const ProjectDetail = () => {
     const menu = ['MANIFEST', 'PROJECTS', 'CONTACT']
     let { id } = useParams()
     const [title, setTitle] = useState('')
+    const [description, setDescription] = useState('')
+    const [image, setImage] = useState('')
+    const postDescription = marked(description)
 
     useEffect(() => {
         client.getEntry(id)
             .then((entry) => {
                 console.log(entry)
                 setTitle(entry.fields.name)
+                setDescription(entry.fields.descriptionProject)
+                setImage(entry.fields.image.fields.file.url)
             })
             .catch(console.error)
     }, []);
@@ -32,10 +38,24 @@ const ProjectDetail = () => {
 
         <MainLayout>
             <Menu titles={menu}></Menu>
-            <div className="detail-container">
-                <div className="title-project-container bold2">
+            <div className="title-detail-container">
+                <div className="title-project-container bold">
                    {title} 
                 </div>
+                <div className="photo-project-container bold"
+                   style={{
+                    backgroundImage: `url(${image})`,
+                    backgroundPosition: 'center',
+                    backgroundSize: 'cover',
+                    backgroundRepeat: 'no-repeat'
+                 }}>
+                </div>
+            </div>
+            <div className="description-detail-container regular2">
+                <span dangerouslySetInnerHTML={{__html: postDescription}} className="description-item" />
+                <span className="video-item bold">
+                 VIDEO
+                </span> 
             </div>
         </MainLayout>
 
