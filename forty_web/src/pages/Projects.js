@@ -9,7 +9,6 @@ import MainLayout from '../components/MainLayout'
 import ProjectList from '../components/ProjectList'
 
 const menu = ['MANIFEST', 'PROJECTS', 'CONTACT']
-
 class Projects extends React.Component{
   
   
@@ -18,14 +17,21 @@ class Projects extends React.Component{
   }
 
   componentDidMount() {
-      client.getEntries()
+      client.getEntries({
+        content_type: "productions"
+      })
       .then((response) => {
           this.setState({
               projects: response.items
           })
+          console.log(response.items)
+          
       })
       .catch(console.error)
-  }
+  };
+
+
+
 
   render() {
     return (

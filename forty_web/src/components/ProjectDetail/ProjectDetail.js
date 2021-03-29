@@ -18,13 +18,15 @@ const ProjectDetail = () => {
     const [title, setTitle] = useState('')
     const [description, setDescription] = useState('')
     const [image, setImage] = useState('')
-    const postDescription = marked(description)
 
     useEffect(() => {
-        client.getEntry(id)
+        client.getEntry({
+            content_type: "productions",
+            entry_id:id 
+            })
             .then((entry) => {
                 console.log(entry)
-                setTitle(entry.fields.name)
+                setTitle(entry.fields.title)
                 setDescription(entry.fields.descriptionProject)
                 setImage(entry.fields.image.fields.file.url)
             })
@@ -52,7 +54,6 @@ const ProjectDetail = () => {
                 </div>
             </div>
             <div className="description-detail-container regular2">
-                <span dangerouslySetInnerHTML={{__html: postDescription}} className="description-item" />
                 <span className="video-item bold">
                  VIDEO
                 </span> 

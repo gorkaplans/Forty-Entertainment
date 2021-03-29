@@ -11,6 +11,7 @@ import { useHistory } from "react-router-dom";
 
 const ProjectList = ({projectslist}) => {
    
+
    let history = useHistory();
 
    const handleOnClick = (id) =>{
@@ -28,7 +29,7 @@ const ProjectList = ({projectslist}) => {
                   backgroundSize: 'cover',
                   backgroundRepeat: 'no-repeat'
                }}
-            className='project-img bold4'>{project.fields.name}</div>
+            className='project-img bold4'>{project.fields.title}</div>
          </div>)}
        </div>
        
