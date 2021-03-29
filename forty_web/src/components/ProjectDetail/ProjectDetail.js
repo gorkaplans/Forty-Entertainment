@@ -18,6 +18,8 @@ const ProjectDetail = () => {
     const [title, setTitle] = useState('')
     const [description, setDescription] = useState('')
     const [image, setImage] = useState('')
+    const [poster, setPoster] = useState('')
+
 
     useEffect(() => {
         client.getEntry({
@@ -25,10 +27,10 @@ const ProjectDetail = () => {
             entry_id:id 
             })
             .then((entry) => {
-                console.log(entry)
                 setTitle(entry.fields.title)
                 setDescription(entry.fields.descriptionProject)
                 setImage(entry.fields.image.fields.file.url)
+                setPoster(entry.fields.poster.fields.file.url)
             })
             .catch(console.error)
     }, []);
@@ -46,9 +48,8 @@ const ProjectDetail = () => {
                 </div>
                 <div className="photo-project-container bold"
                    style={{
-                    backgroundImage: `url(${image})`,
-                    backgroundPosition: 'center',
-                    backgroundSize: 'cover',
+                    backgroundImage: `url(${poster})`,
+                    backgroundSize: 'auto',
                     backgroundRepeat: 'no-repeat'
                  }}>
                 </div>

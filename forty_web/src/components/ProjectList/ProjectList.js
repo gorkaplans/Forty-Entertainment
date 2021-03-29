@@ -29,7 +29,10 @@ const ProjectList = ({projectslist}) => {
                   backgroundSize: 'cover',
                   backgroundRepeat: 'no-repeat'
                }}
-            className='project-img bold4'>{project.fields.title}</div>
+            className='project-img '>
+               <h1 className="bold-img">{project.fields.title}</h1>
+               <p className="regular-img">{project.fields.category}</p>
+               </div>
          </div>)}
        </div>
        

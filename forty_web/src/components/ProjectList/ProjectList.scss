@@ -14,9 +14,36 @@
         justify-content: center;
         align-items: center;
         color: $secondary2;
+        flex-direction: column;
 
         &:hover{
             opacity: 1;
+
+            .bold-img{
+                font-size: 36pt;	
+
+            }
+
+            .regular-img{
+                font-size: 18pt;
+            }
+        }
+
+        .bold-img{
+            font-family: 'Poppins', sans-serif;
+            font-weight: bolder;
+            font-size: 32pt;
+            transition: $transition1;
+            text-align: left;
+        }
+
+        .regular-img{
+            font-family: 'Poppins', sans-serif;
+            font-weight: normal;
+            font-size: 14pt;
+            transition: $transition1;
+            text-align: left;
+            margin-top: 5px;
         }
     }
 
