@@ -19,6 +19,8 @@ const ProjectDetail = () => {
     const [description, setDescription] = useState('')
     const [image, setImage] = useState('')
     const [poster, setPoster] = useState('')
+    const [sinopsi, setSinopsi] = useState('')
+
 
 
     useEffect(() => {
@@ -31,6 +33,8 @@ const ProjectDetail = () => {
                 setDescription(entry.fields.descriptionProject)
                 setImage(entry.fields.image.fields.file.url)
                 setPoster(entry.fields.poster.fields.file.url)
+                setSinopsi(entry.fields.sinopsi)
+
             })
             .catch(console.error)
     }, []);
@@ -48,12 +52,24 @@ const ProjectDetail = () => {
                 </div>
                 <div className="photo-project-container bold"
                    style={{
-                    backgroundImage: `url(${poster})`,
-                    backgroundSize: 'auto',
+                    backgroundImage: `url(${image})`,
+                    backgroundSize: 'cover',
                     backgroundRepeat: 'no-repeat'
                  }}>
                 </div>
             </div>
+            <div className="second-container">
+                <div className="poster-project bold"
+                   style={{
+                    backgroundImage: `url(${poster})`,
+                    backgroundSize: 'contain',
+                    backgroundRepeat: 'no-repeat'
+                    }}>
+                </div>
+                <div className="sinopsi-block regular1">
+                    <p>{sinopsi}</p>
+                </div>
+            </div>    
             <div className="description-detail-container regular2">
                 <span className="video-item bold">
                  VIDEO

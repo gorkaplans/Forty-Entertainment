@@ -73,3 +73,33 @@
 
     }
 }
+
+
+.second-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: 300px;
+    width: 86%;
+    margin-left: auto;
+
+    .poster-project{
+        width: 24%;
+        height: 100%;
+    }
+
+    .sinopsi-block{
+      width: 76%;
+      height: 100%;  
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding-right: 100px;
+    }
+
+
+    
+}
+
+
