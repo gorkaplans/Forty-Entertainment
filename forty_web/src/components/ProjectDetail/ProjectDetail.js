@@ -20,6 +20,7 @@ const ProjectDetail = () => {
     const [image, setImage] = useState('')
     const [poster, setPoster] = useState('')
     const [sinopsi, setSinopsi] = useState('')
+    const [video, setVideo] = useState('')
 
 
 
@@ -34,6 +35,7 @@ const ProjectDetail = () => {
                 setImage(entry.fields.image.fields.file.url)
                 setPoster(entry.fields.poster.fields.file.url)
                 setSinopsi(entry.fields.sinopsi)
+                setVideo(entry.fields.trailerlink)
 
             })
             .catch(console.error)
@@ -58,29 +60,29 @@ const ProjectDetail = () => {
                  }}>
                 </div>
             </div>
-            <div className="second-container">
-                <div className="poster-project bold"
-                   style={{
-                    backgroundImage: `url(${poster})`,
-                    backgroundSize: 'contain',
-                    backgroundRepeat: 'no-repeat'
-                    }}>
+
+            <div className="sinopsi-detail-container">
+                <div className="poster-container-2">
+                <img src={poster}></img>
+
                 </div>
-                <div className="sinopsi-block regular1">
-                    <p>{sinopsi}</p>
+                <div className="sinopsi-project-container">
+                   {sinopsi} 
                 </div>
-            </div>    
-            <div className="description-detail-container regular2">
-                <span className="video-item bold">
-                 VIDEO
-                </span> 
             </div>
+ 
+            <div className="description-detail-container regular2">
+                    <iframe 
+                    frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
+                    src={`https://player.vimeo.com/video/${video}`}>
+                    </iframe> 
+            </div>
+
         </MainLayout>
 
     )
 }
 
 export default ProjectDetail;
-
 
 
