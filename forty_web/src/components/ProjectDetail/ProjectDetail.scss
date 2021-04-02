@@ -134,5 +134,24 @@
 }
 
 
+.credits-container{
+    width: 80%;
+    margin-left: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+    background-color: $primary1;
+    font-family: 'Poppins', sans-serif;
+    font-weight: normal;
+    font-size: 12pt;
+    transition: $transition1;
+    text-align: left;
+    color: $secondary1;
+}
+
+
 
 

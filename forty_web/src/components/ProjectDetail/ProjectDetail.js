@@ -21,6 +21,7 @@ const ProjectDetail = () => {
     const [poster, setPoster] = useState('')
     const [sinopsi, setSinopsi] = useState('')
     const [video, setVideo] = useState('')
+    const [credits, setCredits] = useState('')
 
 
 
@@ -36,6 +37,7 @@ const ProjectDetail = () => {
                 setPoster(entry.fields.poster.fields.file.url)
                 setSinopsi(entry.fields.sinopsi)
                 setVideo(entry.fields.trailerlink)
+                setCredits(entry.fields.productionCredits)
 
             })
             .catch(console.error)
@@ -76,6 +78,9 @@ const ProjectDetail = () => {
                     frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
                     src={`https://player.vimeo.com/video/${video}`}>
                     </iframe> 
+            </div>
+            <div className="credits-container"> 
+                {credits}
             </div>
 
         </MainLayout>
