@@ -30,17 +30,19 @@
 }
 
 .description-detail-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    min-height: 70vh;
-    height: auto;
     width: 86%;
+    height: fit-content;
     margin-left: auto;
+    padding: 49% 0 0 0 ;
+    position: relative;
 
     iframe{
         object-fit: fill;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
     }
 
     .description-item{
