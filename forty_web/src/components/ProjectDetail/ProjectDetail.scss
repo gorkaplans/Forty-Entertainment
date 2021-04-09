@@ -135,7 +135,7 @@
 
 
 .credits-container{
-    width: 80%;
+    width: 87%;
     margin-left: auto;
     height: auto;
     display: flex;
@@ -145,11 +145,46 @@
     padding: 5%;
     background-color: $primary1;
     font-family: 'Poppins', sans-serif;
-    font-weight: normal;
     font-size: 12pt;
     transition: $transition1;
     text-align: left;
     color: $secondary1;
+    line-height: 2rem;
+
+    .grid-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 0px 0px;
+        grid-template-areas:
+          ". ."; 
+        justify-items: start;
+        justify-content: space-around; 
+        grid-column-gap: 5rem;   
+
+
+    }
+}
+
+.palms-wraper{
+    height: auto;
+    width: 87%;
+    padding: 0 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-left: auto;
+    background-color: $primary3;
+    padding-top: 2rem;
+
+    .palm-container{
+        height: 8rem;
+        width: 8rem;
+        margin-right: 2rem;
+        
+    }
 }
 
 

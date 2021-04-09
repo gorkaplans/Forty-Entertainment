@@ -22,7 +22,9 @@ const ProjectDetail = () => {
     const [sinopsi, setSinopsi] = useState('')
     const [video, setVideo] = useState('')
     const [credits, setCredits] = useState('')
+    const [palms, setPalms] = useState ([])
 
+    const formatCredits = marked(credits)
 
 
     useEffect(() => {
@@ -38,12 +40,14 @@ const ProjectDetail = () => {
                 setSinopsi(entry.fields.sinopsi)
                 setVideo(entry.fields.trailerlink)
                 setCredits(entry.fields.productionCredits)
+                setPalms(entry.fields.palms)
+
 
             })
             .catch(console.error)
     }, []);
 
-    console.log(title)
+   console.log(palms)
 
 
     return (
@@ -80,8 +84,20 @@ const ProjectDetail = () => {
                     </iframe> 
             </div>
             <div className="credits-container"> 
-                {credits}
+               <section className="grid-container" dangerouslySetInnerHTML={{__html: formatCredits}} />
             </div>
+            <div className="palms-wraper">
+                    {palms.map((value, index) => {
+                        return <div
+                            className="palm-container" 
+                            style={{
+                            backgroundImage:`url(${value.fields.file.url})`,
+                            backgroundSize: 'contain',
+                            backgroundRepeat: 'no-repeat',
+                            backgroundPositionY: 'center',
+                        }}> </div>
+                    })}
+                </div>
 
         </MainLayout>
 
