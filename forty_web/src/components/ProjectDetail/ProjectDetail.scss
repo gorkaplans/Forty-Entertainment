@@ -45,26 +45,6 @@
         height: 100%;
     }
 
-    .description-item{
-        margin-bottom: 5%;
-
-        h1{
-            font-weight: bolder;
-            font-size: 16pt;
-            margin-bottom: 20px;
-            
-        }
-
-        h2{
-            font-weight: bold;
-            font-size: 12pt;
-            margin-bottom: 10px;
-        }
-
-        p{
-            margin-bottom: 20px;
-        }
-    }
     .video-item{
         background-color: $primary3;
         width: 100%;
@@ -186,6 +166,64 @@
         
     }
 }
+
+
+@media (max-width: 900px){
+  
+    .title-detail-container{
+        width: 100vw;
+        height: fit-content;
+        margin-top: 14vh;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        
+        .title-project-container{
+            width: 100%;
+            height: 10vh;
+        }
+    
+        .photo-project-container{
+            visibility: hidden;
+            position: absolute;
+    
+        }
+    
+    }
+
+
+    .sinopsi-detail-container{
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+        overflow: hidden;
+        
+        .sinopsi-project-container{
+            font-size: 10pt;
+            transition: $transition1;
+            padding: 8%;
+        }
+    
+        .poster-container-2{
+            height: auto;
+            max-width: 100%;
+            height: 100%;    
+            img{
+                height: 100%;
+                width: 100%;
+            }
+        }
+    
+    }
+
+    .description-detail-container{
+        width: 100%;
+        margin-left: 0;
+        padding: 56% 0 0 0 ;
+
+    }
+}
+
 
 
 
