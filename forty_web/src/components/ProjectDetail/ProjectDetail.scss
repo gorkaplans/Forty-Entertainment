@@ -131,6 +131,10 @@
     color: $secondary1;
     line-height: 2rem;
 
+    strong{
+        font-weight: bolder;
+    }
+
     .grid-container{
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -221,6 +225,34 @@
         margin-left: 0;
         padding: 56% 0 0 0 ;
 
+    }
+
+    .credits-container{
+        width: 100%;
+        height: auto;
+        font-size: 10pt;
+        line-height: 1rem;
+        margin-left: 0;
+        padding: 4%;
+
+        .grid-container{
+            grid-column-gap: 3rem;   
+            grid-row-gap:1rem;
+        }
+    }
+
+    .palms-wraper{
+        height: auto;
+        width: 100%;
+        padding: 0 5%;
+        padding-top: 2rem;
+    
+        .palm-container{
+            height: 6rem;
+            width: 6rem;
+            margin-right: 2rem;
+            
+        }
     }
 }
 

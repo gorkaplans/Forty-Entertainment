@@ -84,7 +84,7 @@ const ProjectDetail = () => {
                     </iframe> 
             </div>
             <div className="credits-container"> 
-               <section className="grid-container" dangerouslySetInnerHTML={{__html: formatCredits}} />
+                <section className="grid-container" dangerouslySetInnerHTML={{__html: formatCredits}} />
             </div>
             <div className="palms-wraper">
                     {palms.map((value, index) => {
