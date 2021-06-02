@@ -9,6 +9,8 @@ import Manifest from './pages/Manifest';
 import Contact from './pages/Contact';
 import Projects from './pages/Projects';
 import Privacy from './pages/Privacy';
+import Legal from './pages/Legal';
+import Cookies from './pages/Cookies';
 import ProjectDetail from './components/ProjectDetail/ProjectDetail';
 
 function App() {
@@ -30,6 +32,12 @@ function App() {
         </Route>
         <Route path="/Privacy" exact>
             <Privacy />
+        </Route>
+        <Route path="/Legal" exact>
+            <Legal />
+        </Route>
+        <Route path="/Cookies" exact>
+            <Cookies />
         </Route>
         <Route path="/Projects/:id">
             <ProjectDetail />

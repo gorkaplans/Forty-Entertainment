@@ -33,8 +33,8 @@ const Contact = () => {
         </div>
         <div className="contact-footer ">
           <Link className="legal regular1" to='/Privacy'><p>Privacy Policy</p></Link>
-          <p className="regular1">Legal Advice</p>
-          <p className="regular1">Cookies Policy</p>
+          <Link className="legal regular1" to='/Legal'><p>Legal Advice</p></Link>
+          <Link className="legal regular1" to='/Cookies'><p>Cookies Advice</p></Link>
         </div>
       </div>
       </div>

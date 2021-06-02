@@ -22,32 +22,29 @@ const ProjectDetail = () => {
     const [sinopsi, setSinopsi] = useState('')
     const [video, setVideo] = useState('')
     const [credits, setCredits] = useState('')
-    const [palms, setPalms] = useState ([])
+    const [palms, setPalms] = useState([])
 
     const formatCredits = marked(credits)
 
 
+    async function getSingleProject(idProject) {
+        const entry = await client.getEntry(idProject)
+        setTitle(entry.fields.title)
+        setDescription(entry.fields.descriptionProject)
+        setImage(entry.fields.image.fields.file.url)
+        setPoster(entry.fields.poster.fields.file.url)
+        setSinopsi(entry.fields.sinopsi)
+        setVideo(entry.fields.trailerlink)
+        setCredits(entry.fields.productionCredits)
+        setPalms(entry.fields.palms)
+    }
+
+
     useEffect(() => {
-        client.getEntry({
-            content_type: "productions",
-            entry_id:id 
-            })
-            .then((entry) => {
-                setTitle(entry.fields.title)
-                setDescription(entry.fields.descriptionProject)
-                setImage(entry.fields.image.fields.file.url)
-                setPoster(entry.fields.poster.fields.file.url)
-                setSinopsi(entry.fields.sinopsi)
-                setVideo(entry.fields.trailerlink)
-                setCredits(entry.fields.productionCredits)
-                setPalms(entry.fields.palms)
-
-
-            })
-            .catch(console.error)
+        getSingleProject(id)
     }, []);
 
-   console.log(palms)
+    console.log(palms)
 
 
     return (
@@ -56,48 +53,57 @@ const ProjectDetail = () => {
             <Menu titles={menu}></Menu>
             <div className="title-detail-container">
                 <div className="title-project-container bold">
-                   {title} 
+                    {title}
                 </div>
                 <div className="photo-project-container bold"
-                   style={{
-                    backgroundImage: `url(${image})`,
-                    backgroundSize: 'cover',
-                    backgroundRepeat: 'no-repeat'
-                 }}>
+                    style={{
+                        backgroundImage: `url(${image})`,
+                        backgroundSize: 'cover',
+                        backgroundRepeat: 'no-repeat'
+                    }}>
                 </div>
             </div>
 
             <div className="sinopsi-detail-container">
                 <div className="poster-container-2">
-                <img src={poster}></img>
+                    <img src={poster}></img>
 
                 </div>
                 <div className="sinopsi-project-container">
-                   {sinopsi} 
+                    {sinopsi}
                 </div>
             </div>
- 
-            <div className="description-detail-container regular2">
-                    <iframe 
-                    frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
-                    src={`https://player.vimeo.com/video/${video}`}>
-                    </iframe> 
+            {
+                video && video.length ?
+                    <div className="description-detail-container regular2">
+                        <iframe
+                            frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
+                            src={`https://player.vimeo.com/video/${video}`}>
+                        </iframe>
+                    </div>
+                    : <span></span>
+            }
+            <div className="credits-container">
+                <section className="grid-container" dangerouslySetInnerHTML={{ __html: formatCredits }} />
             </div>
-            <div className="credits-container"> 
-                <section className="grid-container" dangerouslySetInnerHTML={{__html: formatCredits}} />
-            </div>
-            <div className="palms-wraper">
-                    {palms.map((value, index) => {
-                        return <div
-                            className="palm-container" 
-                            style={{
-                            backgroundImage:`url(${value.fields.file.url})`,
+
+            {palms && palms.length ? <div className="palms-wraper">
+                {palms.map((value, index) => {
+                    return <div
+                        className="palm-container"
+                        style={{
+                            backgroundImage: `url(${value.fields.file.url})`,
                             backgroundSize: 'contain',
                             backgroundRepeat: 'no-repeat',
                             backgroundPositionY: 'center',
                         }}> </div>
-                    })}
-                </div>
+                })}
+            </div>
+                : <span></span>}
+
+
+
+
 
         </MainLayout>
 
