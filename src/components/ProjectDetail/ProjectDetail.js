@@ -22,9 +22,11 @@ const ProjectDetail = () => {
     const [sinopsi, setSinopsi] = useState('')
     const [video, setVideo] = useState('')
     const [credits, setCredits] = useState('')
+    const [date, setDate] = useState('')
     const [palms, setPalms] = useState([])
 
     const formatCredits = marked(credits)
+    const formatDate = marked(date)
 
 
     async function getSingleProject(idProject) {
@@ -36,6 +38,7 @@ const ProjectDetail = () => {
         setSinopsi(entry.fields.sinopsi)
         setVideo(entry.fields.trailerlink)
         setCredits(entry.fields.productionCredits)
+        setDate(entry.fields.preDate)
         setPalms(entry.fields.palms)
     }
 
@@ -44,7 +47,6 @@ const ProjectDetail = () => {
         getSingleProject(id)
     }, []);
 
-    console.log(palms)
 
 
     return (
@@ -70,6 +72,7 @@ const ProjectDetail = () => {
 
                 </div>
                 <div className="sinopsi-project-container">
+                <section className="date" dangerouslySetInnerHTML={{ __html: formatDate }} />  
                     {sinopsi}
                 </div>
             </div>

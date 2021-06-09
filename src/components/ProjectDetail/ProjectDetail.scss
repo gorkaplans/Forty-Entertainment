@@ -78,6 +78,7 @@
         height: 100%;
         background-color: $primary2;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         color: $secondary2;
@@ -87,6 +88,19 @@
         transition: $transition1;
         text-align: left;
         padding: 10%;
+
+        .date{
+
+            margin-right: auto;
+            margin-bottom: 1.5rem;
+
+            strong{
+                font-weight: bolder;
+            }
+
+        }
+
+       
     }
 
     .poster-project-container{
