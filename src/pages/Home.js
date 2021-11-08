@@ -1,20 +1,31 @@
 import { Link } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useEffect, useState} from 'react';
 import { client } from '../client';
 
 
 import MainLayout from '../components/MainLayout';
 import './Home.scss'
+import useInterval from './../hooks/useInterval'
 
 const Home = () => {
   const [activeBg, setActiveBg] = useState('')
   const [images, setImages] = useState([])
+  
+  // The counter
   const [count, setCount] = useState(0)
+  // Dynamic delay
+  const [delay, setDelay] = useState(4000)
+  // ON/OFF
+  const [isPlaying, setPlaying] = useState(false)
 
 
 
-
-
+  useEffect(() => {
+    callImages();
+    setPlaying(true)
+    
+    
+  }, []);
 
 
 const callImages = () => {
@@ -33,32 +44,23 @@ const callImages = () => {
   .catch(console.error)
 }
 
+useInterval(
+  () => {
+    if(count < images.length){
+    setCount(count + 1)
+    setActiveBg(images[count])}
+    else{
+      setCount(0)
+    }
+    
+  },
+  isPlaying ? delay : null,
+)
 
 
 
 
-  useEffect(() => {
-    callImages();
-    const updateImage = (images) => {
-      console.log('index' + count)
-  
-      if(count <= images.lenght){
-        setActiveBg(images[count])
-        console.log(activeBg)
-        setCount(count +1);
-     } else{
-       setCount(0)
-     };
-  }; 
-    const interval = setInterval(() => {
-      updateImage(images);
-      console.log(activeBg)
-    }, 4000);
-    return () => clearInterval(interval);
-  }, );
 
-
-/// aactivar el set interval  { setInterval(updateImage(images,index), 2000)}
 
 return (
     <MainLayout>
@@ -67,7 +69,7 @@ return (
               <Link className="logo" to='/'></Link>
             </div>
             <Link class="about-container bold" to="/Manifest">
-              MANIFEST
+              MANIFESTO
             </Link>
             <Link class="contact-container bold" to="/Contact">
               CONTACT

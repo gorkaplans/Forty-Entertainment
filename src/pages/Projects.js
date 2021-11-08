@@ -8,7 +8,7 @@ import Menu from '../components/Menu';
 import MainLayout from '../components/MainLayout'
 import ProjectList from '../components/ProjectList'
 
-const menu = ['MANIFEST', 'PROJECTS', 'CONTACT']
+const menu = ['MANIFESTO', 'PROJECTS', 'CONTACT']
 class Projects extends React.Component{
   
   
@@ -24,7 +24,6 @@ class Projects extends React.Component{
           this.setState({
               projects: response.items
           })
-          console.log(response.items)
           
       })
       .catch(console.error)

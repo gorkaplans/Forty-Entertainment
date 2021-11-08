@@ -6,7 +6,7 @@ import MainLayout from '../components/MainLayout'
 const Privacy = () => {
 
 
-  const menu = ['MANIFEST', 'PROJECTS', 'CONTACT']
+  const menu = ['MANIFESTO', 'PROJECTS', 'CONTACT']
 
     return (
       <MainLayout>

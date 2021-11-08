@@ -4,7 +4,7 @@ import MainLayout from '../components/MainLayout'
 
 const Manifest = () => {
 
-  const menu = ['MANIFEST', 'PROJECTS', 'CONTACT']
+  const menu = ['MANIFESTO', 'PROJECTS', 'CONTACT']
 
 return (
   <>
