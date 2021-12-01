@@ -87,7 +87,6 @@
         min-height: 100%;
         width: 25%;
         background-color: $primary2;
-        opacity: 80%;
         color: $secondary1;
         transition: $transition1;
 /*         background-repeat: no-repeat;
@@ -97,7 +96,6 @@
 
         &:hover{
             width: 30%;
-            opacity: 100%;
         }
     }
 

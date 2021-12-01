@@ -14,11 +14,10 @@
         background-image: url('../images/dot.jpg');
         background-size: cover;
         background-repeat: no-repeat;
-        opacity: 90%;
         transition: $transition1;
 
         &:hover{
-            opacity: 100%;
+ 
             min-width: 40%;
         }
     }
