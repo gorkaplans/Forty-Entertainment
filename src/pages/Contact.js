@@ -8,16 +8,15 @@ import MainLayout from '../components/MainLayout'
 const Contact = () => {
 
 
-  const menu = ['MANIFEST', 'PROJECTS', 'CONTACT']
+  const menu = ['MANIFESTO', 'PROJECTS', 'CONTACT']
 
     return (
       <MainLayout>
       <div className='contact-container2'>
       <Menu titles={menu}></Menu>
       <div className='claim-contact bold4'>
-        <h1>We are the aliens! 
-        <br></br>
-        Where have we met? </h1>
+        <h1>We are just a <br></br>speck of dust
+        </h1>
       </div>
       <div className='contact-column'>
         <div className="contact-info bold2">

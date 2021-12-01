@@ -67,7 +67,7 @@ return (
               <Link className="logo" to='/'></Link>
             </div>
             <Link class="about-container bold" to="/Manifest">
-              MANIFEST
+              MANIFESTO
             </Link>
             <Link class="contact-container bold" to="/Contact">
               CONTACT
