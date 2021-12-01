@@ -24,7 +24,6 @@ class Projects extends React.Component{
           this.setState({
               projects: response.items
           })
-          console.log(response.items)
           
       })
       .catch(console.error)
