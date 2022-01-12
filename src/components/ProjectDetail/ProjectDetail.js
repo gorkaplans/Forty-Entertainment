@@ -13,10 +13,9 @@ import marked from 'marked'
 
 
 const ProjectDetail = () => {
-    const menu = ['MANIFEST', 'PROJECTS', 'CONTACT']
+    const menu = ['MANIFESTO', 'PROJECTS', 'CONTACT']
     let { id } = useParams()
     const [title, setTitle] = useState('')
-    const [description, setDescription] = useState('')
     const [image, setImage] = useState('')
     const [poster, setPoster] = useState('')
     const [sinopsi, setSinopsi] = useState('')
@@ -32,7 +31,6 @@ const ProjectDetail = () => {
     async function getSingleProject(idProject) {
         const entry = await client.getEntry(idProject)
         setTitle(entry.fields.title)
-        setDescription(entry.fields.descriptionProject)
         setImage(entry.fields.image.fields.file.url)
         setPoster(entry.fields.poster.fields.file.url)
         setSinopsi(entry.fields.sinopsi)
@@ -68,7 +66,7 @@ const ProjectDetail = () => {
 
             <div className="sinopsi-detail-container">
                 <div className="poster-container-2">
-                    <img src={poster}></img>
+                    <img src={poster} alt="poster_project"></img>
 
                 </div>
                 <div className="sinopsi-project-container">
@@ -80,6 +78,7 @@ const ProjectDetail = () => {
                 video && video.length ?
                     <div className="description-detail-container regular2">
                         <iframe
+                            title={title}
                             frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
                             src={`https://player.vimeo.com/video/${video}`}>
                         </iframe>
