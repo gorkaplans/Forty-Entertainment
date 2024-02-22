@@ -1,0 +1,14 @@
+main {
+  background-image: url('/bg.jpg');
+  background-position: center;
+  background-size: cover;
+  position: fixed;
+  width: 100dvw;
+  height: 100dvh;
+  top: 0;
+  left: 0;
+
+  @media (max-width: 768px) {
+    background-image: url('/bg-mobile.jpg');
+  }
+}
